@@ -4,4 +4,158 @@ body {
        */
     font: 100%/1.5 system-ui;
 }
-  
+
+body {
+    max-width: 100ch;
+    margin-inline: max(1em, (100% - 100ch) / 2);
+    padding: 1em;
+}
+
+nav ul, nav li {
+  display: contents;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid oklch(80% 3% 200);
+  margin-bottom: 1em;
+}
+
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.1em;
+  font-weight: bold;
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+  padding-bottom: 0.1em;
+}
+
+:root {
+  --color-accent: oklch(65% 50% 0);
+}
+
+html {
+  accent-color: var(--color-accent);
+}
+
+form * {
+  font: inherit;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+label {
+  display: contents;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+button {
+  grid-column: 1 / -1;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em;
+}
+
+.projects article h2 {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+p {
+  margin: 0.8rem 0;
+}
+
+strong {
+  color: #004d99;
+}
+
+/* Article Styles */
+article {
+  margin-bottom: 2rem;
+}
+
+article h3 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+article time {
+  font-style: italic;
+  color: #666;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #034484;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section p {
+  font-style: oblique;
+  color: #1d1d1d;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav li {
+      margin: 10px 0;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  section {
+      margin: 1rem;
+      padding: 1rem;
+  }
+}

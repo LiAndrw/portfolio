@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Pact</title>
+    <title>Contact Page</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -11,23 +11,20 @@
         <ul>
             <li><a href="../">Home</a></li>
             <li><a href="../projects/">Projects</a></li>
-            <li><a href="./">Contact</a></li>
+            <li><a href="./" class="current">Contact</a></li>
             <li><a href="../resume/">Resume</a></li>
             <li><a href="https://github.com/LiAndrw" target="_blank">GitHub</a></li>
         </ul>
     </nav>
     <h1>Contact Page</h1>
     <form action="mailto:anl082@ucsd.edu" method="POST" enctype="text/plain">
-        <label for="email">Email:</label><br>
-        <input id="email" name="email" type="email" required><br><br>
-
-        <label for="subject">Subject:</label><br>
-        <input id="subject" name="subject"><br><br>
-
-        <label for="body">Message:</label><br>
-        <textarea id="body" name="body" ></textarea><br><br>
-
-        <button>Submit</button>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" required>
+        <label for="subject">Subject:</label>
+        <input id="subject" name="subject">
+        <label for="body">Message:</label>
+        <textarea id="body" name="body" ></textarea>
+        <button>Send</button>
     </form>
 </body>
 </html>
