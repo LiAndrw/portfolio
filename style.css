@@ -3,6 +3,7 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
+    position: relative;
 }
 
 body {
@@ -19,7 +20,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid oklch(80% 3% 200);
   margin-bottom: 1em;
 }
 
@@ -41,6 +41,7 @@ nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   background-color: oklch(from var(--color-accent) 95% 5% h);
   padding-bottom: 0.1em;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 :root {
@@ -68,6 +69,8 @@ label {
 }
 
 button {
+  font-size: 80%;
+  font-family: inherit;
   grid-column: 1 / -1;
 }
 
@@ -162,4 +165,22 @@ section p {
       margin: 1rem;
       padding: 1rem;
   }
+}
+
+:root {
+  color-scheme:light dark;
+  --border-color: oklch(50% 10% 200 / 40%);
+}
+
+nav {
+  border-bottom-color: var(--border-color);
+}
+
+.color-scheme {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+  z-index: 1000000;
 }
