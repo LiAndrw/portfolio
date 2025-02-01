@@ -173,10 +173,22 @@ nav {
 }
 
 .color-scheme {
-  position: absolute;
   right: 1rem;
   top: 1rem;
   font-size: 80%;
   font-family: inherit;
-  z-index: 1000000;
+}
+
+.github-stats {
+  display: flex;
+  justify-content: space-around; /* Spreads items evenly */
+  gap: 20px;
+  text-align: center;
+}
+
+.github-stats dt, 
+.github-stats dd {
+  display: inline-block; /* Ensures dt and dd stay together */
+  margin: 0 5px; /* Adds slight spacing */
+  font-weight: bold;
 }
