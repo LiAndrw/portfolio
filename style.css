@@ -192,3 +192,76 @@ nav {
   margin: 0 5px; /* Adds slight spacing */
   font-weight: bold;
 }
+
+.project-year {
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  color: rgb(108, 108, 108);
+  font-size: 0.9em;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+ul.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  padding: 1em;
+  margin-top: 2em;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  flex: 1;
+}
+
+ul.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1em;
+}
+
+ul.legend li .swatch {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: var(--color);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin: 2em, 0;
+}
+
+path {
+  transition: 300ms;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+
+}
+
+
+
+
+path {
+  cursor: pointer;
+}
