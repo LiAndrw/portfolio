@@ -177,7 +177,6 @@ searchInput.addEventListener('input', (event) => {
         let values = Object.values(project).join('\n').toLowerCase();
         return values.includes(query.toLowerCase());
     });
-
     renderProjects(filteredProjects, projectsContainer, 'h2');
 
     renderPieChart(filteredProjects);
