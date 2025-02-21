@@ -12,8 +12,40 @@
     <h1>Meta</h1>
     <p>"Do you think God stays in heaven because he too lives in fear of what he's created?"
         - Robert Rodriguez, writer of Spy Kids 2
-   </p>
-   <div id="stats"></div>
+    </p>
+    <div id="stats"></div>
     <script type="module" src="../global.js"></script>
+
+    <h2>Commits by time of day</h2>
+
+    <div id="chart-container" style="position: relative;">
+        <div id="chart"></div>
+        <dl id="commit-tooltip" class="info tooltip">
+            <dt>Commit</dt>
+            <dd>
+                <a href="" id="commit-link" target="_blank"></a>
+            </dd>
+      
+            <dt>Date</dt>
+            <dd id="commit-date"></dd>
+
+            <dt>Time</dt>
+            <dd id="commit-time"></dd>
+
+            <dt>Author</dt>
+            <dd id="commit-author"></dd>
+
+            <dt>Lines Edited</dt>
+            <dd id="commit-lines"></dd>
+        </dl>
+        <script>
+            document.addEventListener('mousemove', (event) => {
+                const tooltip = document.getElementById('commit-tooltip');
+                if (!tooltip.hidden) {
+                    tooltip.style.left = `${event.clientX + 10}px`;
+                    tooltip.style.top = `${event.clientY + 10}px`;
+            }
+        });
+    </script>
 </body>
 </html>
