@@ -15,6 +15,7 @@ async function loadProjects() {
     renderPieChart(projects);
 }
 
+
 let projects = [
         {
             title: "League of Legends Esports Void Grubs Impact Analysis.",
@@ -87,6 +88,13 @@ let projects = [
             year: 2024,
             image: "https://vis-society.github.io/labs/2/images/empty.svg",
             description: "Fugit laborum nostrum quisquam quas neque deserunt sequi enim voluptas. Eligendi natus neque, asperiores culpa assumenda eius? Suscipit sit, corrupti dolorem ad soluta, ex, itaque assumenda nam vero minima dicta."
+        },
+        {
+            title: "Boston Bicycle Activity Trend Visualization",
+            year: 2025,
+            image: "https://vis-society.github.io/labs/2/images/empty.svg",
+            description: "Created a website that displays bike traffic in the Boston area, including a bar filter that helps illustrate trends in bike traffic at specific areas of Boston at any given time of day.",
+            url: "https://liandrw.github.io/bostonbiking/"
         }
 ];
 
